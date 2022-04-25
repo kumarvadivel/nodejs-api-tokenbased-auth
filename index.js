@@ -25,7 +25,7 @@ redis.get("redis",(err,rep)=>{
     console.log(`If you see PONG after the colon every thing is successfull:${rep}`)
 })
 
-
+console.log("redis",redis);
 middlewares.requesthider(app)
 middlewares.crossorigin(app)
 
