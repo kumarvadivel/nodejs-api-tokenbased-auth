@@ -7,8 +7,8 @@ const Connection_Options={
     useFindAndModify: false,
     useCreateIndex: true,
     ssl: true,
-    sslValidate: false,
-    sslCA: fs.readFileSync('./rds-combined-ca-bundle.pem')
+    sslValidate: true,
+    sslCA: fs.readFileSync('../rds-combined-ca-bundle.pem')
 }
 
 const  Client= async ()=>{
