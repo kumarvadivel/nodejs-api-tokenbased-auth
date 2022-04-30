@@ -39,7 +39,9 @@ app.use("/api/auth",requestlimiter,AuthRouter)
 app.use("/api/home",function(req,res,next){
     middlewares.AuthMiddleware(req,res,next)
 },HomeRouter)
-
+app.get('/dummy',(req,res)=>{
+    res.status(200).json({"ok":true,"message":"authorized"})
+})
 app.listen(port,()=>{
     console.log(`server is listening on port: ${port}`)
 })
