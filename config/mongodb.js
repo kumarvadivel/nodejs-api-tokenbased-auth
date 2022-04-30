@@ -12,7 +12,7 @@ const Connection_Options={
 }
 
 const  Client= async ()=>{
-    await db.connect(`mongodb://${process.env.DB_USR_NAME}:${process.env.DB_PASSWORD}@${process.env.DB_HOST}:27017/?ssl=true&ssl_ca_certs=rds-combined-ca-bundle.pem&retryWrites=false`,Connection_Options,(res)=>{
+     db.connect(`mongodb://${process.env.DB_USR_NAME}:${process.env.DB_PASSWORD}@${process.env.DB_HOST}:27017/?ssl=true&ssl_ca_certs=rds-combined-ca-bundle.pem&retryWrites=false`,Connection_Options).then(res=>{
         console.log(res)
     }).catch(eer=>{
         console.log(eer);
