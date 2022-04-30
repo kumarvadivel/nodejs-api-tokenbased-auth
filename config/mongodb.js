@@ -6,13 +6,13 @@ const Connection_Options={
     useUnifiedTopology: true,
     useFindAndModify: false,
     useCreateIndex: true,
-    ssl: true,
-    sslValidate: true,
-    sslCA: fs.readFileSync('../rds-combined-ca-bundle.pem')
 }
 
 const  Client= async ()=>{
-     await db.connect(`mongodb://${process.env.DB_USR_NAME}:${process.env.DB_PASSWORD}@${process.env.DB_HOST}:27017/authdb?ssl=true&ssl_ca_certs=rds-combined-ca-bundle.pem&retryWrites=false`,Connection_Options)
+     await db.connect(`mongodb://${process.env.DB_USR_NAME}:${process.env.DB_PASSWORD}@${process.env.DB_HOST}:27017/authdb?retryWrites=false`,Connection_Options).then(res=>{
+         console.log("dsads",res);
+     })
+     
 }
 
 

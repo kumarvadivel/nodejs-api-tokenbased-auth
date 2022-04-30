@@ -11,7 +11,7 @@ const AuthRouter=require('./routes/authrouter');
 const HomeRouter=require('./routes/homerouter');
 const middlewares = require('./middlewares/middlewares');
 //database connection eshtablishment
-db()
+//db()
 //redis client connection eshtablishment
 redis.set("redis","PONG",(err,rep)=>{
     if(err!=null){
