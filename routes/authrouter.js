@@ -3,7 +3,7 @@ const express=require('express')
 const AuthRouter=express.Router();
 const AuthController=require('../controllers/authcontroller')
 AuthRouter.post("/signup",(req,res)=>{
-    
+    console.log("signup");
     AuthController.signup(req,res)
 })
 AuthRouter.post("/login",(req,res)=>{
