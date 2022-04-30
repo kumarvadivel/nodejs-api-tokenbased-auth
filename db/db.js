@@ -3,6 +3,7 @@ const helpers = require('../helpers/helpers')
 const UserModel=require('../models/usermodel')
 const redis=require('../config/redis')
 function signup(data,res){
+    console.log(UserModel);
     UserModel.find({
         $or:[
 
